@@ -1,0 +1,171 @@
+:root {
+  --page: #1B424257;
+  --text: #1F3D3D;
+  --black: #000000;
+}
+
+* {
+  color: var(--text);
+}
+.page {
+  background-color: var(--page);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+  height: 100vh;
+  height: 100svh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+}
+.wrapper {
+  max-width: 720px;
+  margin: 25px 0;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.head {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+h1 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.setting, fieldset {
+  width: 100%;
+  display: flex;
+}
+.setting-box {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;;
+  justify-content: space-between;
+}
+.setting-box_left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.box_top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.box_bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.input-color, .input-file {
+  cursor: pointer;
+}
+#select {
+  background-color: transparent;
+  border: 2px solid var(--text);
+  border-radius: 6px;
+  padding: 1px 6px;
+  height: 31px;
+  cursor: pointer;
+}
+#select > option {
+  border: 2px solid var(--black);
+}
+.Arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.ComicSansMS {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+.CourierNew {
+  font-family: 'Courier New', Courier, monospace;
+}
+.Impact {
+  font-family: Impact, Charcoal, sans-serif;
+}
+.Georgia {
+  font-family: Georgia, serif;
+}
+.Segoe {
+  font-family: 'Segoe UI', sans-serif;
+}
+.Verdana {
+  font-family: Verdana, Geneva, sans-serif;
+}
+.input-text {
+  padding: 1px 6px;
+  height: 25px;
+  outline: none;
+  font-size: 1rem;
+}
+textarea {
+  resize: none;
+  font-size: 1rem;
+  padding: 1px 6px;
+  outline: none;
+}
+.button {
+  background-color: transparent;
+  border: 2px solid var(--text);
+  border-radius: 6px;
+  outline: none;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.image-box {
+  width: 100%;
+  display: flex;
+}
+#canvas {
+  display: none;
+}
+#canvas-box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+#canvas-box > img {
+  max-width: 100%;
+}
+.draggable-element {
+  position: absolute;
+  cursor: move;
+}
+
+@media ((min-width: 300px) and (max-width: 720px)) {
+  .wrapper {
+    max-width: 320px;
+  }
+  .setting-box {
+    display: block;
+  }
+  .box_bottom{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  label {
+    font-size: 1rem;
+  }
+  .setting-box_left {
+    margin-bottom: 10px;
+  }
+  #canvas-box > img {
+    max-width: 100%;
+  }
+}

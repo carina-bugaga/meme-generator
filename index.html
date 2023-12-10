@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" href="favicon.ico"/>
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <title>Meme generator | Генератор мемов</title>
+</head>
+<body class="page">
+  <div class="wrapper">
+    <section class="head">
+      <h1>Meme generator</h1>
+      <img src="./assets/img/paint.svg" alt="paint">
+    </section>
+    <!--end Head -->
+    
+    <section class="setting">
+      <fieldset>
+        <legend>Настройки</legend>
+        <div class="setting-box">
+          <div class="setting-box_left">
+            <div class="box_top">
+              <label>Размер шрифта
+                <input type="number" id="font-size" value="30" min="8" max="200"/>
+              </label>
+              <input id="textTop" type="text" class="input-text" data-offsetX="" data-offsetY="">
+              <input id="textBottom" type="text" class="input-text" data-offsetX="" data-offsetY="">
+            </div>
+            <div class="box_bottom">
+              <input class="input-color" id="input-color" type="color" value="#F953C7">
+              <select id="select">
+                <option value="Arial, Helvetica, sans-serif" class="Arial">Arial</option>
+                <option value="'Comic Sans MS', cursive, sans-serif" class="ComicSansMS">Comic Sans MS</option>
+                <option value="'Courier New', Courier, monospace" class="CourierNew">Courier New</option>
+                <option value="Impact, Charcoal, sans-serif" class="Impact">Impact</option>
+                <option value="Georgia, serif" class="Georgia">Georgia</option>
+                <option value="'Segoe UI', sans-serif" class="Segoe">Segoe UI</option>
+                <option value="Verdana, Geneva, sans-serif" class="Verdana">Verdana</option>
+              </select>
+              <input class="input-file" id="input-file" type="file" accept="image/*">
+            </div>
+          </div>
+          <button class="button" id="button-download">
+            Сохранить
+            <img src="./assets/img/download.svg" alt="download">
+          </button>
+        </div>
+      </fieldset>
+    </section>
+    <!--end Setting -->
+    
+    <section class="image-box">
+      <canvas id="canvas"></canvas>
+      <div id="canvas-box"></div>
+    </section>
+    <!--end Image Box -->
+  </div>
+ 
+  <script src="./js/main.js" type="module"></script>
+</body>
+</html>
