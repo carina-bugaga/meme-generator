@@ -131,9 +131,11 @@ function drawImageBox () {
     })
     //Определяем направления движения касания
     spanTextTop.addEventListener('touchmove', event => {
+      event.preventDefault();
       draggableNewPosition(event, spanTextTop);
     })
     spanTextBottom.addEventListener('touchmove', event => {
+      event.preventDefault();
       draggableNewPosition(event, spanTextBottom);
     })
     spanTextTop.addEventListener('touchend', () => isDraggable = false);
